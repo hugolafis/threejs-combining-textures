@@ -30,7 +30,6 @@ export class Viewer {
     this.texture.magFilter = THREE.LinearFilter;
     this.texture.minFilter = THREE.LinearFilter;
     this.texture.flipY = true;
-    this.texture.mapping = THREE.CubeReflectionMapping;
 
     const cube = new THREE.Mesh(
       new THREE.BoxGeometry(5, 5, 5),
