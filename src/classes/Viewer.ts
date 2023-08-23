@@ -82,8 +82,21 @@ export class Viewer {
     //this.scene.add(helper);
   }
 
-  private loadTextures() {
+  private async loadTextures() {
     const textureLoader = new THREE.TextureLoader();
+    const position = new THREE.Vector2();
+
+    // Load the preview first, sync just for testing purposes
+    const canvas = new OffscreenCanvas(totalWidth, totalHeight);
+    const context = canvas.getContext('2d');
+
+    const previewTexture = await textureLoader.loadAsync('./assets/preview.png');
+    context.drawImage(previewTexture.image, 0, 0, totalWidth, totalHeight);
+
+    const canvasTexture = new THREE.CanvasTexture(canvas);
+    canvasTexture.colorSpace = THREE.SRGBColorSpace;
+
+    this.renderer.copyTextureToTexture(position, canvasTexture, this.texture);
 
     const requests = [
       {
@@ -123,8 +136,6 @@ export class Viewer {
         url: './assets/2_2.png',
       },
     ];
-
-    const position = new THREE.Vector2();
 
     // Load the tiles async
     requests.forEach(item => {
