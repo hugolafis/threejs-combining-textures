@@ -87,47 +87,38 @@ export class Viewer {
 
     const requests = [
       {
-        position: { x: 0, y: 0 },
         startPosition: { x: 0, y: 0 },
         url: './assets/0_0.png',
       },
       {
-        position: { x: 1, y: 0 },
         startPosition: { x: 200, y: 0 },
         url: './assets/1_0.png',
       },
       {
-        position: { x: 2, y: 0 },
         startPosition: { x: 400, y: 0 },
         url: './assets/2_0.png',
       },
       {
-        position: { x: 0, y: 1 },
         startPosition: { x: 0, y: 200 },
         url: './assets/0_1.png',
       },
       {
-        position: { x: 1, y: 1 },
         startPosition: { x: 200, y: 200 },
         url: './assets/1_1.png',
       },
       {
-        position: { x: 2, y: 1 },
         startPosition: { x: 400, y: 200 },
         url: './assets/2_1.png',
       },
       {
-        position: { x: 0, y: 2 },
         startPosition: { x: 0, y: 400 },
         url: './assets/0_2.png',
       },
       {
-        position: { x: 1, y: 2 },
         startPosition: { x: 200, y: 400 },
         url: './assets/1_2.png',
       },
       {
-        position: { x: 2, y: 2 },
         startPosition: { x: 400, y: 400 },
         url: './assets/2_2.png',
       },
